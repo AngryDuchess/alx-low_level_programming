@@ -7,7 +7,7 @@
  * Return: Always 0(success)
  */
 
-int main()
+int main(void)
 {
 	int i = 48;
 	int j = 48;
@@ -21,7 +21,7 @@ int main()
 			k = 48;
 			while (k < 58)
 			{
-				if (i != j && i < j && j != k && j < k)
+				if (i != j && i != k && j != k && i < j && j < k)
 				{
 					putchar(i);
 					putchar(j);
