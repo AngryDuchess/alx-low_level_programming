@@ -9,30 +9,44 @@
 
 int main(void)
 {
-	int i = 48;
-	int j = 48;
-	int k = 48;
-	int l = 48;
+	int i, j, k, l, temp1, temp2; 
+	i = j = k = l = 48;
 
 	while (i < 58)
 	{
 		j = 48;
 		while (j < 58)
 		{
-			if (i == j && i < j)
+			k = 48;
+			while (k < 58)
 			{
-				putchar(i);
-				putchar(j);
-				if (i == 57 && j == 56)
+				l = 48;
+				while (l < 58)
 				{
-					break;
+					temp1 = (i * 10) + j;
+					temp2 = (k * 10) + l;
+
+					if (temp1 < temp2)
+					{
+						putchar(i);
+						putchar(j);
+						putchar(' ');
+						putchar(k);
+						putchar(l);
+						
+						if (i == 57 && j == 56 && k == 57 && l == 57)
+							break;
+
+						putchar(',');
+						putchar(' ');
+					}
+					l++;
 				}
-				putchar(',');
-				putchar(' ');
+				k++;
 			}
-			i++;
+			j++;
 		}
-		j++;
+		i++;
 	}
 	putchar('\n');
 	return (0);
