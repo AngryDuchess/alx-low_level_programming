@@ -7,6 +7,8 @@
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in array
  * @value: value to search for
+ *
+ * Return: Position of search element
  */
 
 int binary_search(int *array, size_t size, int value)
@@ -25,7 +27,7 @@ int binary_search(int *array, size_t size, int value)
 		for (i = low; i <= high; i++)
 		{
 			printf("%d", array[i]);
-			if ( i < high)
+			if (i < high)
 				printf(", ");
 		}
 		printf("\n");
